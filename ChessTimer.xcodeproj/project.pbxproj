@@ -14,6 +14,12 @@
 		8E30DDC72A290D450070DA0C /* ChessTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDC62A290D450070DA0C /* ChessTimerTests.swift */; };
 		8E30DDD12A290D450070DA0C /* ChessTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDD02A290D450070DA0C /* ChessTimerUITests.swift */; };
 		8E30DDD32A290D450070DA0C /* ChessTimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDD22A290D450070DA0C /* ChessTimerUITestsLaunchTests.swift */; };
+		8E30DDE32A29102A0070DA0C /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE22A29102A0070DA0C /* TimerModel.swift */; };
+		8E30DDE42A29102A0070DA0C /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE22A29102A0070DA0C /* TimerModel.swift */; };
+		8E30DDE62A292F230070DA0C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE52A292F230070DA0C /* TimerView.swift */; };
+		8E30DDE72A292F230070DA0C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE52A292F230070DA0C /* TimerView.swift */; };
+		8E30DDE92A292F9B0070DA0C /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE82A292F9B0070DA0C /* TimerViewModel.swift */; };
+		8E30DDEA2A292F9B0070DA0C /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30DDE82A292F9B0070DA0C /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,9 @@
 		8E30DDCC2A290D450070DA0C /* ChessTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E30DDD02A290D450070DA0C /* ChessTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTimerUITests.swift; sourceTree = "<group>"; };
 		8E30DDD22A290D450070DA0C /* ChessTimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E30DDE22A29102A0070DA0C /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		8E30DDE52A292F230070DA0C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		8E30DDE82A292F9B0070DA0C /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +104,9 @@
 		8E30DDB32A290D420070DA0C /* ChessTimer */ = {
 			isa = PBXGroup;
 			children = (
+				8E30DDE12A290EEE0070DA0C /* ViewModel */,
+				8E30DDE02A290EE40070DA0C /* View */,
+				8E30DDDF2A290ED00070DA0C /* Model */,
 				8E30DDB42A290D420070DA0C /* ChessTimerApp.swift */,
 				8E30DDB62A290D420070DA0C /* ContentView.swift */,
 				8E30DDB82A290D450070DA0C /* Assets.xcassets */,
@@ -127,6 +139,30 @@
 				8E30DDD22A290D450070DA0C /* ChessTimerUITestsLaunchTests.swift */,
 			);
 			path = ChessTimerUITests;
+			sourceTree = "<group>";
+		};
+		8E30DDDF2A290ED00070DA0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E30DDE22A29102A0070DA0C /* TimerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E30DDE02A290EE40070DA0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E30DDE52A292F230070DA0C /* TimerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E30DDE12A290EEE0070DA0C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E30DDE82A292F9B0070DA0C /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E30DDE92A292F9B0070DA0C /* TimerViewModel.swift in Sources */,
+				8E30DDE32A29102A0070DA0C /* TimerModel.swift in Sources */,
 				8E30DDB72A290D420070DA0C /* ContentView.swift in Sources */,
+				8E30DDE62A292F230070DA0C /* TimerView.swift in Sources */,
 				8E30DDB52A290D420070DA0C /* ChessTimerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E30DDEA2A292F9B0070DA0C /* TimerViewModel.swift in Sources */,
+				8E30DDE72A292F230070DA0C /* TimerView.swift in Sources */,
 				8E30DDC72A290D450070DA0C /* ChessTimerTests.swift in Sources */,
+				8E30DDE42A29102A0070DA0C /* TimerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
