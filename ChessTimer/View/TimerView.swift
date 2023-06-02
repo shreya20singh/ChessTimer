@@ -4,14 +4,10 @@
 //
 //  Created by Aerologix Aerologix on 6/1/23.
 //
-
 import Foundation
 import SwiftUI
 
 struct TimerView: View {
-//    let viewModel = TimerViewModel(totalTime: 300) // Example: 5 minutes
-//    let timerView = TimerView(viewModel: viewModel)
-
     @ObservedObject var viewModel: TimerViewModel
     
     var body: some View {
@@ -28,6 +24,7 @@ struct TimerView: View {
                 }) {
                     Text("Start")
                 }
+                .disabled(viewModel.isTimerRunning)
                 
                 Button(action: {
                     viewModel.pauseTimer()
@@ -43,6 +40,13 @@ struct TimerView: View {
             }
         }
         .padding()
+        .alert(item: $viewModel.timesUpPlayer) { player in
+            Alert(title: Text("Times UP"),
+                  message: Text("Player \(player.rawValue) ran out of time!"),
+                  dismissButton: .default(Text("OK")) {
+                      viewModel.resetTimer()
+                  })
+        }
     }
     
     private func timeString(from timeInterval: TimeInterval) -> String {
@@ -52,4 +56,3 @@ struct TimerView: View {
         return String(format: "%02d:%02d", minutes, seconds)
     }
 }
-

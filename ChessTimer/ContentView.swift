@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var totalTime: TimeInterval = 300
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if totalTime == 0 {
+                TimerSetupView(totalTime: $totalTime)
+            } else {
+                TimerView(viewModel: TimerViewModel(totalTime: totalTime))
+            }
         }
-        .padding()
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

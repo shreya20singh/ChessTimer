@@ -9,11 +9,13 @@ import SwiftUI
 
 @main
 struct ChessTimerApp: App {
-    var viewModel: TimerViewModel = TimerViewModel(totalTime: 300) // Example: 5 minutes
+    var viewModel: TimerViewModel = TimerViewModel(totalTime: 300)
+    @State private var totalTime: TimeInterval = 0 // Example: 5 minutes
     
     var body: some Scene {
         WindowGroup {
-            TimerView(viewModel: viewModel)
+//            TimerView(viewModel: viewModel)
+            TimerSetupView(totalTime: $totalTime)
         }
     }
 }
